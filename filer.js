@@ -55,7 +55,7 @@ function calculate()
     document.getElementById("outFlows").value = outFlows;
     document.getElementById("unreconciled").value = inFlows - outFlows - assets;
     
-    if(inFlows === outFlows)
+    if(inFlows === (outFlows + assets))
       {
         alert("Congratulations! Amount is Reconciled.")
       }
@@ -63,7 +63,7 @@ function calculate()
 
 function printReport()
   {
-  if(inFlows === outFlows && inFlows!== undefined)
+  if(inFlows === (outFlows + assets) && inFlows!== undefined)
   {
     const d = new Date();
     document.write("<h2>File Income Returns at FBR through IRIS (Page 1/2)</h2>");
