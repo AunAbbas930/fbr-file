@@ -103,7 +103,7 @@ function printReport()
     document.write("<tr><td>Educational</td><td>7071</td><td>"+education+"</td></tr>");
     document.write("<tr><td>Functions / Gatherings</td><td>7073</td><td>"+gatherings+"</td></tr>");
     document.write("<tr><td>Donation / Zakat</td><td>7076</td><td>"+donation+"</td></tr>");
-    document.write("<tr><td>Other Personal / Household Expenses</td><td>7087</td><td>"+expenses+"</td></tr></table>");
+    document.write("<tr><td>Other Personal / Household Expenses</td><td>7087</td><td>"+houseExpenses+"</td></tr></table>");
     
     document.write("<div style='break-after:page'></div>");
     document.write("<h2>File Income Returns at FBR through IRIS (Page 2/2)</h2>");
