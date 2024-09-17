@@ -45,7 +45,7 @@ function calculate()
     assets = investmentAccount + preciousPossession + houseHold + personalItems + cash + otherAsset;
 
     inFlows = salary;
-    outFlows = taxSource + expenses + assets;
+    outFlows = taxSource + expenses;
     
     
     document.getElementById("assetsCurrent").value = Passets + assets;
@@ -53,7 +53,7 @@ function calculate()
     document.getElementById("assetsChange").value = assets;
     document.getElementById("inFlows").value = inFlows;
     document.getElementById("outFlows").value = outFlows;
-    document.getElementById("unreconciled").value = inFlows - outFlows;
+    document.getElementById("unreconciled").value = inFlows - outFlows - assets;
     
     if(inFlows === outFlows)
       {
@@ -91,7 +91,7 @@ function printReport()
     document.write("<p>Under head of <b><i>116 - Wealth Statement -> Personal Expenses</i></b>, enter:</p>");
     document.write("<table border='1' style='border-collapse: collapse;'><tr><td><b>Description</b></td><td><b>Code</b></td><td><b>Amount</b></td></tr>");
     document.write("<tr><td>Rent</td><td>7051</td><td>"+rent+"</td></tr>");
-    document.write("<tr><td>Tax</td><td>7052</td><td>"+tax+"</td></tr>");
+    document.write("<tr><td>Tax</td><td>7052</td><td>"+(tax + taxSource)+"</td></tr>");
     document.write("<tr><td>Vehicle Maintanance</td><td>7055</td><td>"+vehicleMaintenance+"</td></tr>");
     document.write("<tr><td>Travelling</td><td>7056</td><td>"+travelling+"</td></tr>");
     document.write("<tr><td>Electricity</td><td>7058</td><td>"+electricity+"</td></tr>");
@@ -135,7 +135,7 @@ function printReport()
     document.write("<tr><td>Increase / Decrease in Assets</td><td>7031</td><td>"+assets+"</td></tr>");
     document.write("<tr><td>Inflows</td><td>7049</td><td>"+salary+"</td></tr>");
     document.write("<tr><td>OutFlows</td><td>7099</td><td>"+outFlows+"</td></tr>");
-    document.write("<tr><td>Unreconciled Amount</td><td>703000</td><td>"+(inFlows-outFlows)+"</td></tr></table>");
+    document.write("<tr><td>Unreconciled Amount</td><td>703000</td><td>"+(inFlows-outFlows-assets)+"</td></tr></table>");
     
     document.write("<br><br><br><p><b>Note:</b> In case of any problem or consultancy, please contact us. We are at your service.");
     document.write("<br>You can contact through e-mail: <a href='mailto:try_aun@hotmail.com' target='blank'>try_aun@hotmail.com</a></p>");
