@@ -113,14 +113,14 @@ function printReport()
     
     document.write("<p>Under head of <b><i>116 - Wealth Statement -> Personal Assets / Liabilities</i></b>, enter:</p>");
     document.write("<table border='1' style='border-collapse: collapse;'><tr><td><b>Description</b></td><td><b>Code</b></td><td><b>Amount</b></td></tr>");
-    document.write("<tr><td>Investment (Non-Business) (Account / Annuity etc.)</td><td>7006</td><td>"+investmentAccount+"</td></tr>");
+    document.write("<tr><td>Investment (Non-Business) (Account / Annuity etc.)</td><td>7006</td><td>"+(investmentAccount + PinvestmentAccount)+"</td></tr>");
     document.write("<tr><td colspan='3'><i>(Create a new entry as your Bank Account, with details)</td></tr>");
-    document.write("<tr><td>Precious Possession</td><td>7009</td><td>"+preciousPossession+"</td></tr>");
+    document.write("<tr><td>Precious Possession</td><td>7009</td><td>"+ (preciousPossession + PpreciousPossession)+"</td></tr>");
     document.write("<tr><td colspan='3'><i>(Create a new entry as <b>Gold/Jewelry</b>)</td></tr>");
-    document.write("<tr><td>Household Effect</td><td>7010</td><td>"+houseHold+"</td></tr>");
-    document.write("<tr><td>Personal Item</td><td>7011</td><td>"+personalItems+"</td></tr>");
-    document.write("<tr><td>Cash (Non-Business)</td><td>7012</td><td>"+cash+"</td></tr>");
-    document.write("<tr><td>Any Other Asset</td><td>7013</td><td>"+otherAsset+"</td></tr>");
+    document.write("<tr><td>Household Effect</td><td>7010</td><td>"+(houseHold + PhouseHold)+"</td></tr>");
+    document.write("<tr><td>Personal Item</td><td>7011</td><td>"+(personalItems + PpersonalItems)+"</td></tr>");
+    document.write("<tr><td>Cash (Non-Business)</td><td>7012</td><td>"+(cash + Pcash)+"</td></tr>");
+    document.write("<tr><td>Any Other Asset</td><td>7013</td><td>"+(otherAsset + PotherAsset)+"</td></tr>");
     document.write("<tr><td colspan='3'><i>(Create a new entry as <b>Prize Bonds</b>)</td></tr></table>");
     
     document.write("<p>Under head of <b><i>116 - Wealth Statement -> Reconcilation of Net Assets -> Inflows (7049)</i></b>, enter:</p>");
